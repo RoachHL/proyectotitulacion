@@ -1,0 +1,42 @@
+﻿@model sisetitulacion.Models.TBL_TipoEquipo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>TBL_TipoEquipo</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.nombreTipoEquipo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.nombreTipoEquipo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.abreviatura)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.abreviatura)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id_TipoEquipo }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

@@ -11,107 +11,107 @@ using sisetitulacion.Models;
 
 namespace sisetitulacion.Controllers
 {
-    public class TBL_TrabajoController : Controller
+    public class TBL_DistritoController : Controller
     {
         private Model db = new Model();
 
-        // GET: TBL_Trabajo
+        // GET: TBL_Distrito
         public async Task<ActionResult> Index()
         {
-            return View(await db.TBL_Trabajo.ToListAsync());
+            return View(await db.TBL_Distrito.ToListAsync());
         }
 
-        // GET: TBL_Trabajo/Details/5
-        public async Task<ActionResult> Details(int? id)
+        // GET: TBL_Distrito/Details/5
+        public async Task<ActionResult> Details(byte? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TBL_Trabajo tBL_Trabajo = await db.TBL_Trabajo.FindAsync(id);
-            if (tBL_Trabajo == null)
+            TBL_Distrito tBL_Distrito = await db.TBL_Distrito.FindAsync(id);
+            if (tBL_Distrito == null)
             {
                 return HttpNotFound();
             }
-            return View(tBL_Trabajo);
+            return View(tBL_Distrito);
         }
 
-        // GET: TBL_Trabajo/Create
+        // GET: TBL_Distrito/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: TBL_Trabajo/Create
+        // POST: TBL_Distrito/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "idTrabajo,nombretrabajo,precio,descriocion")] TBL_Trabajo tBL_Trabajo)
+        public async Task<ActionResult> Create([Bind(Include = "id_Distrito,nombre_Disrito")] TBL_Distrito tBL_Distrito)
         {
             if (ModelState.IsValid)
             {
-                db.TBL_Trabajo.Add(tBL_Trabajo);
+                db.TBL_Distrito.Add(tBL_Distrito);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            return View(tBL_Trabajo);
+            return View(tBL_Distrito);
         }
 
-        // GET: TBL_Trabajo/Edit/5
-        public async Task<ActionResult> Edit(int? id)
+        // GET: TBL_Distrito/Edit/5
+        public async Task<ActionResult> Edit(byte? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TBL_Trabajo tBL_Trabajo = await db.TBL_Trabajo.FindAsync(id);
-            if (tBL_Trabajo == null)
+            TBL_Distrito tBL_Distrito = await db.TBL_Distrito.FindAsync(id);
+            if (tBL_Distrito == null)
             {
                 return HttpNotFound();
             }
-            return View(tBL_Trabajo);
+            return View(tBL_Distrito);
         }
 
-        // POST: TBL_Trabajo/Edit/5
+        // POST: TBL_Distrito/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "idTrabajo,nombretrabajo,precio,descriocion")] TBL_Trabajo tBL_Trabajo)
+        public async Task<ActionResult> Edit([Bind(Include = "id_Distrito,nombre_Disrito")] TBL_Distrito tBL_Distrito)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(tBL_Trabajo).State = EntityState.Modified;
+                db.Entry(tBL_Distrito).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(tBL_Trabajo);
+            return View(tBL_Distrito);
         }
 
-        // GET: TBL_Trabajo/Delete/5
-        public async Task<ActionResult> Delete(int? id)
+        // GET: TBL_Distrito/Delete/5
+        public async Task<ActionResult> Delete(byte? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TBL_Trabajo tBL_Trabajo = await db.TBL_Trabajo.FindAsync(id);
-            if (tBL_Trabajo == null)
+            TBL_Distrito tBL_Distrito = await db.TBL_Distrito.FindAsync(id);
+            if (tBL_Distrito == null)
             {
                 return HttpNotFound();
             }
-            return View(tBL_Trabajo);
+            return View(tBL_Distrito);
         }
 
-        // POST: TBL_Trabajo/Delete/5
+        // POST: TBL_Distrito/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(int id)
+        public async Task<ActionResult> DeleteConfirmed(byte id)
         {
-            TBL_Trabajo tBL_Trabajo = await db.TBL_Trabajo.FindAsync(id);
-            db.TBL_Trabajo.Remove(tBL_Trabajo);
+            TBL_Distrito tBL_Distrito = await db.TBL_Distrito.FindAsync(id);
+            db.TBL_Distrito.Remove(tBL_Distrito);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

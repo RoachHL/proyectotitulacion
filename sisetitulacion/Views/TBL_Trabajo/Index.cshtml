@@ -1,0 +1,53 @@
+﻿@model IEnumerable<sisetitulacion.Models.TBL_Trabajo>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nombretrabajo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descriocion)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombretrabajo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descriocion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.idTrabajo }) |
+                @Html.ActionLink("Details", "Details", new { id=item.idTrabajo }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.idTrabajo })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

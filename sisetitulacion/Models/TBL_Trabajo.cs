@@ -23,6 +23,8 @@ namespace sisetitulacion.Models
         [Column(TypeName = "smallmoney")]
         public decimal? precio { get; set; }
 
+        public string descriocion { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_DetalleGuia> TBL_DetalleGuia { get; set; }
     }

@@ -335,6 +335,12 @@
     <Compile Include="Controllers\Consultas.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ObtenerDatos.cs" />
+    <Compile Include="Controllers\TBL_ClienteController.cs" />
+    <Compile Include="Controllers\TBL_DistritoController.cs" />
+    <Compile Include="Controllers\TBL_EmpleadoController.cs" />
+    <Compile Include="Controllers\TBL_EquipoController.cs" />
+    <Compile Include="Controllers\TBL_MarcaController.cs" />
+    <Compile Include="Controllers\TBL_TipoEquipoController.cs" />
     <Compile Include="Controllers\TBL_tipoUsuarioController.cs" />
     <Compile Include="Controllers\TBL_TrabajoController.cs" />
     <Compile Include="Controllers\TBL_UsuarioController.cs" />
@@ -343,7 +349,6 @@
     </Compile>
     <Compile Include="Models\EDNI.cs" />
     <Compile Include="Models\Model.cs" />
-    <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Models\TBL_Cliente.cs" />
     <Compile Include="Models\TBL_DetalleGuia.cs" />
     <Compile Include="Models\TBL_DetalleRecibo.cs" />
@@ -425,13 +430,55 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\TBL_Trabajo\IndexE.cshtml" />
+    <Content Include="Views\TBL_Trabajo\Create.cshtml" />
+    <Content Include="Views\TBL_Trabajo\Delete.cshtml" />
+    <Content Include="Views\TBL_Trabajo\Details.cshtml" />
+    <Content Include="Views\TBL_Trabajo\Edit.cshtml" />
+    <Content Include="Views\TBL_Trabajo\Index.cshtml" />
+    <Content Include="Views\TBL_Usuario\Create.cshtml" />
+    <Content Include="Views\TBL_Usuario\Delete.cshtml" />
+    <Content Include="Views\TBL_Usuario\Details.cshtml" />
+    <Content Include="Views\TBL_Usuario\Edit.cshtml" />
+    <Content Include="Views\TBL_Usuario\Index.cshtml" />
+    <Content Include="Views\TBL_Cliente\Create.cshtml" />
+    <Content Include="Views\TBL_Cliente\Delete.cshtml" />
+    <Content Include="Views\TBL_Cliente\Details.cshtml" />
+    <Content Include="Views\TBL_Cliente\Edit.cshtml" />
+    <Content Include="Views\TBL_Cliente\Index.cshtml" />
+    <Content Include="Views\TBL_Distrito\Create.cshtml" />
+    <Content Include="Views\TBL_Distrito\Delete.cshtml" />
+    <Content Include="Views\TBL_Distrito\Details.cshtml" />
+    <Content Include="Views\TBL_Distrito\Edit.cshtml" />
+    <Content Include="Views\TBL_Distrito\Index.cshtml" />
+    <Content Include="Views\TBL_Empleado\Create.cshtml" />
+    <Content Include="Views\TBL_Empleado\Delete.cshtml" />
+    <Content Include="Views\TBL_Empleado\Details.cshtml" />
+    <Content Include="Views\TBL_Empleado\Edit.cshtml" />
+    <Content Include="Views\TBL_Empleado\Index.cshtml" />
+    <Content Include="Views\TBL_Equipo\Create.cshtml" />
+    <Content Include="Views\TBL_Equipo\Delete.cshtml" />
+    <Content Include="Views\TBL_Equipo\Details.cshtml" />
+    <Content Include="Views\TBL_Equipo\Edit.cshtml" />
+    <Content Include="Views\TBL_Equipo\Index.cshtml" />
+    <Content Include="Views\TBL_Marca\Create.cshtml" />
+    <Content Include="Views\TBL_Marca\Delete.cshtml" />
+    <Content Include="Views\TBL_Marca\Details.cshtml" />
+    <Content Include="Views\TBL_Marca\Edit.cshtml" />
+    <Content Include="Views\TBL_Marca\Index.cshtml" />
+    <Content Include="Views\TBL_TipoEquipo\Create.cshtml" />
+    <Content Include="Views\TBL_TipoEquipo\Delete.cshtml" />
+    <Content Include="Views\TBL_TipoEquipo\Details.cshtml" />
+    <Content Include="Views\TBL_TipoEquipo\Edit.cshtml" />
+    <Content Include="Views\TBL_TipoEquipo\Index.cshtml" />
+    <Content Include="Views\TBL_tipoUsuario\Create.cshtml" />
+    <Content Include="Views\TBL_tipoUsuario\Delete.cshtml" />
+    <Content Include="Views\TBL_tipoUsuario\Details.cshtml" />
+    <Content Include="Views\TBL_tipoUsuario\Edit.cshtml" />
+    <Content Include="Views\TBL_tipoUsuario\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\TBL_TipoEquipo\" />
-    <Folder Include="Views\TBL_tipoUsuario\" />
-    <Folder Include="Views\TBL_Usuario\" />
+    <Folder Include="Views\Trabajo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

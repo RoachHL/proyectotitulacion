@@ -1,0 +1,74 @@
+﻿@model sisetitulacion.Models.TBL_Equipo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>TBL_Equipo</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TBL_Cliente.Tipo_documento)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TBL_Cliente.Tipo_documento)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TBL_Marca.nombreMarca)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TBL_Marca.nombreMarca)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TBL_TipoEquipo.nombreTipoEquipo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TBL_TipoEquipo.nombreTipoEquipo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.modelo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.modelo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.numersoserie)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.numersoserie)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.observaciones)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.observaciones)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.idequipo }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

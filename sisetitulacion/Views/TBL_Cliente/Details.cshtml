@@ -1,0 +1,82 @@
+﻿@model sisetitulacion.Models.TBL_Cliente
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>TBL_Cliente</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TBL_Distrito.nombre_Disrito)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TBL_Distrito.nombre_Disrito)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Tipo_documento)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Tipo_documento)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Numero_Documento)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Numero_Documento)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Nombre_Cliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Nombre_Cliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Direccion)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.telefono)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.telefono)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.celular)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.celular)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id_cliente }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

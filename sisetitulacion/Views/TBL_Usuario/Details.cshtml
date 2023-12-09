@@ -1,0 +1,50 @@
+﻿@model sisetitulacion.Models.TBL_Usuario
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>TBL_Usuario</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TBL_tipoUsuario.nombretitpousario)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TBL_tipoUsuario.nombretitpousario)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.nombresuario)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.nombresuario)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.contrasenha)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.contrasenha)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id_usuario }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

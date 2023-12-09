@@ -1,0 +1,71 @@
+﻿@model IEnumerable<sisetitulacion.Models.TBL_Equipo>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TBL_Cliente.Tipo_documento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TBL_Marca.nombreMarca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TBL_TipoEquipo.nombreTipoEquipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.numersoserie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.observaciones)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TBL_Cliente.Tipo_documento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TBL_Marca.nombreMarca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TBL_TipoEquipo.nombreTipoEquipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.modelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numersoserie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.observaciones)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.idequipo }) |
+                @Html.ActionLink("Details", "Details", new { id=item.idequipo }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.idequipo })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

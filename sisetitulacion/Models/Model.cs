@@ -8,11 +8,10 @@ namespace sisetitulacion.Models
     public partial class Model : DbContext
     {
         public Model()
-            : base("name=Modelo")
+            : base("name=Modeltitulacion")
         {
         }
 
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TBL_Cliente> TBL_Cliente { get; set; }
         public virtual DbSet<TBL_DetalleGuia> TBL_DetalleGuia { get; set; }
         public virtual DbSet<TBL_DetalleRecibo> TBL_DetalleRecibo { get; set; }
